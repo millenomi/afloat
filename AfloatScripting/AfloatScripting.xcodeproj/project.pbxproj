@@ -1,0 +1,373 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1547F4540F0A6ECC000E4267 /* AfloatScriptingAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1547F4530F0A6ECC000E4267 /* AfloatScriptingAppDelegate.m */; };
+		1547F4590F0A7034000E4267 /* AfloatScripting.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 1547F4580F0A7034000E4267 /* AfloatScripting.sdef */; };
+		1547F45F0F0A70C1000E4267 /* AfloatScriptingToggleKeptAfloatCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 1547F45E0F0A70C1000E4267 /* AfloatScriptingToggleKeptAfloatCommand.m */; };
+		1547F4A80F0A74F1000E4267 /* AfloatScriptingSetKeptAfloatCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 1547F4A70F0A74F1000E4267 /* AfloatScriptingSetKeptAfloatCommand.m */; };
+		1547F4CA0F0A78D7000E4267 /* AfloatScriptingSetAlphaValueCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 1547F4C90F0A78D7000E4267 /* AfloatScriptingSetAlphaValueCommand.m */; };
+		15EF77E30F0B84E50030D94B /* AfloatScriptingSetKeptOnAllSpacesCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 15EF77E20F0B84E50030D94B /* AfloatScriptingSetKeptOnAllSpacesCommand.m */; };
+		15EF77E70F0B859C0030D94B /* AfloatSetPinnedToDesktopCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 15EF77E60F0B859C0030D94B /* AfloatSetPinnedToDesktopCommand.m */; };
+		15EF77EB0F0B86CC0030D94B /* AfloatSetOverlayCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 15EF77EA0F0B86CC0030D94B /* AfloatSetOverlayCommand.m */; };
+		15EF77EF0F0B87790030D94B /* AfloatMakeMoreTransparentCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 15EF77EE0F0B87790030D94B /* AfloatMakeMoreTransparentCommand.m */; };
+		15EF77F20F0B87F80030D94B /* AfloatMakeLessTransparentCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 15EF77F10F0B87F80030D94B /* AfloatMakeLessTransparentCommand.m */; };
+		15EF77FA0F0B88880030D94B /* AfloatDisableOverlaysCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 15EF77F90F0B88880030D94B /* AfloatDisableOverlaysCommand.m */; };
+		15EF77FE0F0B88DE0030D94B /* AfloatShowWindowFileInFinderCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 15EF77FD0F0B88DE0030D94B /* AfloatShowWindowFileInFinderCommand.m */; };
+		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		1547F4520F0A6ECC000E4267 /* AfloatScriptingAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AfloatScriptingAppDelegate.h; sourceTree = "<group>"; };
+		1547F4530F0A6ECC000E4267 /* AfloatScriptingAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AfloatScriptingAppDelegate.m; sourceTree = "<group>"; };
+		1547F4580F0A7034000E4267 /* AfloatScripting.sdef */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.sdef; path = AfloatScripting.sdef; sourceTree = "<group>"; };
+		1547F45D0F0A70C1000E4267 /* AfloatScriptingToggleKeptAfloatCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AfloatScriptingToggleKeptAfloatCommand.h; sourceTree = "<group>"; };
+		1547F45E0F0A70C1000E4267 /* AfloatScriptingToggleKeptAfloatCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AfloatScriptingToggleKeptAfloatCommand.m; sourceTree = "<group>"; };
+		1547F4610F0A7110000E4267 /* AfloatScriptingWire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AfloatScriptingWire.h; sourceTree = "<group>"; };
+		1547F4A60F0A74F1000E4267 /* AfloatScriptingSetKeptAfloatCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AfloatScriptingSetKeptAfloatCommand.h; sourceTree = "<group>"; };
+		1547F4A70F0A74F1000E4267 /* AfloatScriptingSetKeptAfloatCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AfloatScriptingSetKeptAfloatCommand.m; sourceTree = "<group>"; };
+		1547F4C80F0A78D7000E4267 /* AfloatScriptingSetAlphaValueCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AfloatScriptingSetAlphaValueCommand.h; sourceTree = "<group>"; };
+		1547F4C90F0A78D7000E4267 /* AfloatScriptingSetAlphaValueCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AfloatScriptingSetAlphaValueCommand.m; sourceTree = "<group>"; };
+		1547F5050F0A7E4C000E4267 /* AfloatScripting.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = AfloatScripting.xcconfig; sourceTree = "<group>"; };
+		15EF77E10F0B84E50030D94B /* AfloatScriptingSetKeptOnAllSpacesCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AfloatScriptingSetKeptOnAllSpacesCommand.h; sourceTree = "<group>"; };
+		15EF77E20F0B84E50030D94B /* AfloatScriptingSetKeptOnAllSpacesCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AfloatScriptingSetKeptOnAllSpacesCommand.m; sourceTree = "<group>"; };
+		15EF77E50F0B859C0030D94B /* AfloatSetPinnedToDesktopCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AfloatSetPinnedToDesktopCommand.h; sourceTree = "<group>"; };
+		15EF77E60F0B859C0030D94B /* AfloatSetPinnedToDesktopCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AfloatSetPinnedToDesktopCommand.m; sourceTree = "<group>"; };
+		15EF77E90F0B86CC0030D94B /* AfloatSetOverlayCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AfloatSetOverlayCommand.h; sourceTree = "<group>"; };
+		15EF77EA0F0B86CC0030D94B /* AfloatSetOverlayCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AfloatSetOverlayCommand.m; sourceTree = "<group>"; };
+		15EF77ED0F0B87790030D94B /* AfloatMakeMoreTransparentCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AfloatMakeMoreTransparentCommand.h; sourceTree = "<group>"; };
+		15EF77EE0F0B87790030D94B /* AfloatMakeMoreTransparentCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AfloatMakeMoreTransparentCommand.m; sourceTree = "<group>"; };
+		15EF77F00F0B87F80030D94B /* AfloatMakeLessTransparentCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AfloatMakeLessTransparentCommand.h; sourceTree = "<group>"; };
+		15EF77F10F0B87F80030D94B /* AfloatMakeLessTransparentCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AfloatMakeLessTransparentCommand.m; sourceTree = "<group>"; };
+		15EF77F80F0B88880030D94B /* AfloatDisableOverlaysCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AfloatDisableOverlaysCommand.h; sourceTree = "<group>"; };
+		15EF77F90F0B88880030D94B /* AfloatDisableOverlaysCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AfloatDisableOverlaysCommand.m; sourceTree = "<group>"; };
+		15EF77FC0F0B88DE0030D94B /* AfloatShowWindowFileInFinderCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AfloatShowWindowFileInFinderCommand.h; sourceTree = "<group>"; };
+		15EF77FD0F0B88DE0030D94B /* AfloatShowWindowFileInFinderCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AfloatShowWindowFileInFinderCommand.m; sourceTree = "<group>"; };
+		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* AfloatScripting_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AfloatScripting_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* Afloat Scripting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Afloat Scripting.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1547F4520F0A6ECC000E4267 /* AfloatScriptingAppDelegate.h */,
+				1547F4530F0A6ECC000E4267 /* AfloatScriptingAppDelegate.m */,
+				1547F4A50F0A74DE000E4267 /* Scripting Commands */,
+				1547F4610F0A7110000E4267 /* AfloatScriptingWire.h */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		1547F4A50F0A74DE000E4267 /* Scripting Commands */ = {
+			isa = PBXGroup;
+			children = (
+				1547F45D0F0A70C1000E4267 /* AfloatScriptingToggleKeptAfloatCommand.h */,
+				1547F45E0F0A70C1000E4267 /* AfloatScriptingToggleKeptAfloatCommand.m */,
+				1547F4A60F0A74F1000E4267 /* AfloatScriptingSetKeptAfloatCommand.h */,
+				1547F4A70F0A74F1000E4267 /* AfloatScriptingSetKeptAfloatCommand.m */,
+				1547F4C80F0A78D7000E4267 /* AfloatScriptingSetAlphaValueCommand.h */,
+				1547F4C90F0A78D7000E4267 /* AfloatScriptingSetAlphaValueCommand.m */,
+				15EF77E10F0B84E50030D94B /* AfloatScriptingSetKeptOnAllSpacesCommand.h */,
+				15EF77E20F0B84E50030D94B /* AfloatScriptingSetKeptOnAllSpacesCommand.m */,
+				15EF77E50F0B859C0030D94B /* AfloatSetPinnedToDesktopCommand.h */,
+				15EF77E60F0B859C0030D94B /* AfloatSetPinnedToDesktopCommand.m */,
+				15EF77E90F0B86CC0030D94B /* AfloatSetOverlayCommand.h */,
+				15EF77EA0F0B86CC0030D94B /* AfloatSetOverlayCommand.m */,
+				15EF77F00F0B87F80030D94B /* AfloatMakeLessTransparentCommand.h */,
+				15EF77F10F0B87F80030D94B /* AfloatMakeLessTransparentCommand.m */,
+				15EF77ED0F0B87790030D94B /* AfloatMakeMoreTransparentCommand.h */,
+				15EF77EE0F0B87790030D94B /* AfloatMakeMoreTransparentCommand.m */,
+				15EF77F80F0B88880030D94B /* AfloatDisableOverlaysCommand.h */,
+				15EF77F90F0B88880030D94B /* AfloatDisableOverlaysCommand.m */,
+				15EF77FC0F0B88DE0030D94B /* AfloatShowWindowFileInFinderCommand.h */,
+				15EF77FD0F0B88DE0030D94B /* AfloatShowWindowFileInFinderCommand.m */,
+			);
+			name = "Scripting Commands";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* Afloat Scripting.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* AfloatScripting */ = {
+			isa = PBXGroup;
+			children = (
+				1547F5050F0A7E4C000E4267 /* AfloatScripting.xcconfig */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = AfloatScripting;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* AfloatScripting_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1547F4580F0A7034000E4267 /* AfloatScripting.sdef */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* AfloatScripting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "AfloatScripting" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				1547F5190F0A7ECA000E4267 /* Sign Code */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AfloatScripting;
+			productInstallPath = "$(HOME)/Applications";
+			productName = AfloatScripting;
+			productReference = 8D1107320486CEB800E47090 /* Afloat Scripting.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "AfloatScripting" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* AfloatScripting */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* AfloatScripting */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				1547F4590F0A7034000E4267 /* AfloatScripting.sdef in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1547F5190F0A7ECA000E4267 /* Sign Code */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Sign Code";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$MULTIVERSE\"/Tools/Xcode/Sign || exit 1";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				1547F4540F0A6ECC000E4267 /* AfloatScriptingAppDelegate.m in Sources */,
+				1547F45F0F0A70C1000E4267 /* AfloatScriptingToggleKeptAfloatCommand.m in Sources */,
+				1547F4A80F0A74F1000E4267 /* AfloatScriptingSetKeptAfloatCommand.m in Sources */,
+				1547F4CA0F0A78D7000E4267 /* AfloatScriptingSetAlphaValueCommand.m in Sources */,
+				15EF77E30F0B84E50030D94B /* AfloatScriptingSetKeptOnAllSpacesCommand.m in Sources */,
+				15EF77E70F0B859C0030D94B /* AfloatSetPinnedToDesktopCommand.m in Sources */,
+				15EF77EB0F0B86CC0030D94B /* AfloatSetOverlayCommand.m in Sources */,
+				15EF77EF0F0B87790030D94B /* AfloatMakeMoreTransparentCommand.m in Sources */,
+				15EF77F20F0B87F80030D94B /* AfloatMakeLessTransparentCommand.m in Sources */,
+				15EF77FA0F0B88880030D94B /* AfloatDisableOverlaysCommand.m in Sources */,
+				15EF77FE0F0B88DE0030D94B /* AfloatShowWindowFileInFinderCommand.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1DDD58140DA1D0A300B32029 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DDD58150DA1D0A300B32029 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AfloatScripting_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = "Afloat Scripting";
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AfloatScripting_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = "Afloat Scripting";
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1547F5050F0A7E4C000E4267 /* AfloatScripting.xcconfig */;
+			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1547F5050F0A7E4C000E4267 /* AfloatScripting.xcconfig */;
+			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "AfloatScripting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "AfloatScripting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

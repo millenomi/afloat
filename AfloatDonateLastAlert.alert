@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>L0AlertButtons</key>
+	<array>
+		<string>Donate…</string>
+		<string>No, thanks</string>
+	</array>
+	<key>L0AlertInformativeText</key>
+	<string>If you do, you can support Afloat's author with a small token of your gratitude.</string>
+	<key>L0AlertMessage</key>
+	<string>Do you like keeping your windows afloat?</string>
+	<key>L0AlertShowsSuppressionButton</key>
+	<false/>
+</dict>
+</plist>

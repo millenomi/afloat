@@ -1,0 +1,23 @@
+//
+//  Afloat.xcconfig
+//  Afloat
+//
+//  Created by ∞ on 18/06/08.
+//  Copyright 2008 Emanuele Vulcano. All rights reserved.
+//
+
+
+SDKROOT = macosx10.5
+PREBINDING = NO
+ARCHS = $(ARCHS_STANDARD_32_64_BIT)
+
+
+VERSION = 2.11
+USER_VISIBLE_VERSION = 2.1.1
+
+OBJROOT = $(SRCROOT)/TemporaryItems
+SYMROOT = $(SRCROOT)/Build
+
+INFINITELABS_CODE_SIGNING_IDENTITY = Infinite Labs Code Signing (Mac OS X)
+
+COPY_PHASE_STRIP = NO

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AfloatDonationsURL</key>
+	<string>http://infinite-labs.net/afloat/donate/</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleExecutable</key>
+	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleIconFile</key>
+	<string>Afloat2</string>
+	<key>CFBundleIdentifier</key>
+	<string>net.infinite-labs.Afloat.Donations</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>${VERSION}</string>
+	<key>LSUIElement</key>
+	<true/>
+	<key>CFBundleShortVersionString</key>
+	<string>${USER_VISIBLE_VERSION}</string>
+	<key>NSMainNibFile</key>
+	<string>Donate</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+</dict>
+</plist>

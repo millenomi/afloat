@@ -1,0 +1,42 @@
+
+/* Class = "AfloatPanel"; title = "Afloat — Adjust Effects"; ObjectID = "1"; */
+"1.title" = "Afloat — Regola Effetti";
+
+/* Class = "NSTextFieldCell"; title = "Transparency:"; ObjectID = "21"; */
+"21.title" = "Trasparenza:";
+
+/* Class = "NSTextFieldCell"; title = "Overlay windows float on top of all others and clicks on them \"fall through\" to the windows below."; ObjectID = "27"; */
+"27.title" = "Le sovrimpressioni rimangono sopra tutte le altre finestre. I clic su di esse sono \"passati\" alle finestre sottostanti.";
+
+/* Class = "NSTextFieldCell"; title = "Barely visible"; ObjectID = "37"; */
+"37.title" = "Appena visibile";
+
+/* Class = "NSTextFieldCell"; title = "Opaque"; ObjectID = "39"; */
+"39.title" = "Opaca";
+
+/* Class = "NSTextFieldCell"; title = "Keep this window:"; ObjectID = "65"; */
+"65.title" = "Mantieni la finestra:";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "75"; */
+"75.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Regular"; ObjectID = "76"; */
+"76.title" = "Normale";
+
+/* Class = "NSMenuItem"; title = "Afloat"; ObjectID = "77"; */
+"77.title" = "Fluttuante";
+
+/* Class = "NSMenuItem"; title = "Pinned to the desktop"; ObjectID = "78"; */
+"78.title" = "Incollata alla scrivania";
+
+/* Class = "BGHUDButtonCell"; title = "Make this window an overlay"; ObjectID = "80"; */
+"80.title" = "Mantieni in sovrimpressione";
+
+/* Class = "BGHUDButtonCell"; title = "Keep this window on the screen on all Spaces"; ObjectID = "83"; */
+"83.title" = "Mantieni questa finestra in tutti gli Spaces";
+
+/* Class = "BGHUDButtonCell"; title = "Make it opaque while I'm working with it"; ObjectID = "89"; */
+"89.title" = "Rendila opaca mentre la uso per lavorare";
+
+/* Class = "BGHUDButtonCell"; title = "Done"; ObjectID = "94"; */
+"94.title" = "Fine";

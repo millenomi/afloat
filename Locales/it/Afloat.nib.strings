@@ -1,0 +1,30 @@
+
+/* Class = "NSMenuItem"; title = "Keep Afloat"; ObjectID = "2"; */
+"2.title" = "Fluttuante";
+
+/* Class = "NSMenuItem"; title = "Adjust Effects"; ObjectID = "4"; */
+"4.title" = "Regola Effetti";
+
+/* Class = "NSMenuItem"; title = "Transparency"; ObjectID = "5"; */
+"5.title" = "Trasparenza";
+
+/* Class = "NSMenu"; title = "Transparency"; ObjectID = "6"; */
+"6.title" = "Trasparenza";
+
+/* Class = "NSMenuItem"; title = "Translucent"; ObjectID = "7"; */
+"7.title" = "Traslucido";
+
+/* Class = "NSMenuItem"; title = "Opaque"; ObjectID = "9"; */
+"9.title" = "Opaca";
+
+/* Class = "NSMenuItem"; title = "Make More Transparent"; ObjectID = "10"; */
+"10.title" = "Rendi più trasparente";
+
+/* Class = "NSMenuItem"; title = "Make Less Transparent"; ObjectID = "11"; */
+"11.title" = "Rendi meno trasparente";
+
+/* Class = "NSMenuItem"; title = "Turn Overlays Back to Normal"; ObjectID = "19"; */
+"19.title" = "Disattiva tutte le sovrimpressioni";
+
+/* Class = "NSMenuItem"; title = "Show Window's File in Finder"; ObjectID = "22"; */
+"22.title" = "Mostra il documento nel Finder";

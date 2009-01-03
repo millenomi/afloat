@@ -1,0 +1,17 @@
+//
+// Prefix header for all source files of the 'AfloatScripting' target in the 'AfloatScripting' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+
+static inline BOOL AfloatBOOLFromObject(id object, BOOL defaultValue) {
+	if (!object) return defaultValue;
+	else return [object respondsToSelector:@selector(boolValue)] && [object boolValue];
+}
+
+static inline float AfloatFloatFromObject(id object, float defaultValue) {
+	if (!object || ![object respondsToSelector:@selector(floatValue)]) return defaultValue;
+	else return [object floatValue];
+}
+#endif
