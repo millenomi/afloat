@@ -2,4 +2,7 @@
 *.pbxuser
 *.perspectivev3
 /Compiled Locales
-/build
+Build
+build
+TemporaryItems
+.DS_Store
