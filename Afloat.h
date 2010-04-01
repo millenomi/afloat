@@ -32,9 +32,9 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 - (IBAction) showAdjustEffectsPanel:(id) sender;
 
-- (float) currentAlphaValueForWindow:(NSWindow*) w;
-- (void) setAlphaValue:(float) f forWindow:(NSWindow*) window animated:(BOOL) animate;
-- (void) setAlphaValueByDelta:(float) f forWindow:(NSWindow*) window animate:(BOOL) animate;
+- (CGFloat) currentAlphaValueForWindow:(NSWindow*) w;
+- (void) setAlphaValue:(CGFloat) f forWindow:(NSWindow*) window animated:(BOOL) animate;
+- (void) setAlphaValueByDelta:(CGFloat) f forWindow:(NSWindow*) window animate:(BOOL) animate;
 - (void) setAlphaValueAnimatesOnMouseOver:(BOOL) animates forWindow:(NSWindow*) window;
 - (BOOL) alphaValueAnimatesOnMouseOverForWindow:(NSWindow*) window;
 

@@ -48,6 +48,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 - (void) endTrackingWindow:(NSWindow*) w;
 
 - (BOOL) isWindowIgnoredByAfloat:(NSWindow*) w;
+- (NSWindow*) highestWindowInHierarchyFor:(NSWindow*) w;
 
 @end
 
@@ -165,13 +166,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 - (IBAction) toggleAlwaysOnTop:(id) sender {
 	NSWindow* c = [self currentWindow];
-	L0Log(@"window = %@ titled %@", c, [c title]);
-	L0Log(@"windows = %@", [NSApp orderedWindows]);
-	for (NSWindow* w in [NSApp orderedWindows]) {
-		L0Log(@"titled = %@", [w title]);
-		L0Log(@"visible = %d", [w isVisible]);
-	}
-	[self setKeptAfloat:![self isWindowKeptAfloat:c] forWindow:c showBadgeAnimation:YES];
+	if (c)
+		[self setKeptAfloat:![self isWindowKeptAfloat:c] forWindow:c showBadgeAnimation:YES];
 }
 
 - (BOOL) validateMenuItem:(NSMenuItem*) item {
@@ -237,18 +233,27 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 	return [w collectionBehavior] == NSWindowCollectionBehaviorCanJoinAllSpaces;
 }
 
+- (NSWindow*) highestWindowInHierarchyFor:(NSWindow*) w;
+{
+	while ([w parentWindow])
+		w = [w parentWindow];
+	
+	return w;
+}
+
 - (NSWindow*) currentWindow {
 	NSWindow* w;
 	
-	w = [NSApp keyWindow];
+	w = [self highestWindowInHierarchyFor:[NSApp keyWindow]];
 	if (![self isWindowIgnoredByAfloat:w]) return w;
 	
-	w = [NSApp mainWindow];
+	w = [self highestWindowInHierarchyFor:[NSApp mainWindow]];
 	if (![self isWindowIgnoredByAfloat:w]) return w;
 	
 	for (NSWindow* window in [NSApp orderedWindows]) {
-		if (![self isWindowIgnoredByAfloat:window])
-			return window;
+		w = [self highestWindowInHierarchyFor:window];
+		if (![self isWindowIgnoredByAfloat:w])
+			return w;
 	}
 	
 	return nil;
@@ -259,34 +264,42 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 }
 
 - (IBAction) makeTranslucent:(id) sender {
-	[self setAlphaValue:kAfloatTranslucentAlphaValue forWindow:[self currentWindow] animated:YES];
+	NSWindow* c = [self currentWindow];
+	if (c)
+		[self setAlphaValue:kAfloatTranslucentAlphaValue forWindow:[self currentWindow] animated:YES];
 }
 
 - (IBAction) makeOpaque:(id) sender {
-	[self setAlphaValue:1.0 forWindow:[self currentWindow] animated:YES];
+	NSWindow* c = [self currentWindow];
+	if (c)
+		[self setAlphaValue:1.0 forWindow:[self currentWindow] animated:YES];
 }
 
 - (IBAction) makeMoreTransparent:(id) sender {
-	[self setAlphaValueByDelta:-0.1 forWindow:[self currentWindow] animate:NO];
+	NSWindow* c = [self currentWindow];
+	if (c)
+		[self setAlphaValueByDelta:-0.1 forWindow:[self currentWindow] animate:NO];
 }
 
 - (IBAction) makeLessTransparent:(id) sender {
-	[self setAlphaValueByDelta:0.1 forWindow:[self currentWindow] animate:NO];
+	NSWindow* c = [self currentWindow];
+	if (c)
+		[self setAlphaValueByDelta:0.1 forWindow:[self currentWindow] animate:NO];
 }
 
-- (float) currentAlphaValueForWindow:(NSWindow*) window {
+- (CGFloat) currentAlphaValueForWindow:(NSWindow*) window {
 	id alphaValue = [AfloatStorage sharedValueForWindow:window key:kAfloatLastAlphaValueKey];
 	return (alphaValue)? [alphaValue floatValue] : [window alphaValue];
 }
 
-- (void) setAlphaValueByDelta:(float) delta forWindow:(NSWindow*) window animate:(BOOL) animate {
+- (void) setAlphaValueByDelta:(CGFloat) delta forWindow:(NSWindow*) window animate:(BOOL) animate {
 	if (!window) return;
 	
 	float a = [self currentAlphaValueForWindow:window]; 
 	[self setAlphaValue:a + delta forWindow:window animated:animate];
 }
 
-- (void) setAlphaValue:(float) f forWindow:(NSWindow*) window animated:(BOOL) animate {
+- (void) setAlphaValue:(CGFloat) f forWindow:(NSWindow*) window animated:(BOOL) animate {
 	if (!window) return;
 	
 	if (f > 1.0)
