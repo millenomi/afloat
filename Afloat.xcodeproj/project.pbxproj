@@ -178,7 +178,7 @@
 		15DDB2B10D776C340008FF87 /* JRSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRSwizzle.h; sourceTree = "<group>"; };
 		15F2FF6B0D6611BC00737D76 /* Afloat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Afloat.h; sourceTree = "<group>"; };
 		15F2FF6C0D6611BC00737D76 /* Afloat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Afloat.m; sourceTree = "<group>"; };
-		15FBC3810E9BF4CE0005A4C0 /* it.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; name = it.lproj; path = "__Compiled Locales/it.lproj"; sourceTree = "<group>"; };
+		15FBC3810E9BF4CE0005A4C0 /* it.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; name = it.lproj; path = "Compiled Locales/it.lproj"; sourceTree = "<group>"; };
 		32DBCF630370AF2F00C91783 /* Afloat_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Afloat_Prefix.pch; sourceTree = "<group>"; };
 		8D5B49B6048680CD000E48DA /* Afloat.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Afloat.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };

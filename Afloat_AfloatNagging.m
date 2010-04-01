@@ -13,6 +13,8 @@
 @implementation Afloat (AfloatNagging)
 
 - (void) checkForNagOnInstall {
+#if kAfloatEnableNag
+#warning Nagging is enabled.
 	if (!AfloatNagGetPreferenceForKey(kAfloatInstallationDateKey, [NSDate class]))
 		AfloatNagSetPreferenceForKey(kAfloatInstallationDateKey, [NSDate date]);
 	
@@ -21,6 +23,7 @@
 		NSString* donateApp = [[[b bundlePath] stringByAppendingPathComponent:@"Contents"] stringByAppendingPathComponent:@"Donate for Afloat.app"];
 		[[NSWorkspace sharedWorkspace] openFile:donateApp];
 	}
+#endif
 }
 
 @end

@@ -1,0 +1,5 @@
+*.mode2v3
+*.pbxuser
+*.perspectivev3
+/Compiled Locales
+/build
