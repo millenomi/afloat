@@ -54,8 +54,8 @@
 		if (newParent) {
 			[AfloatStorage setSharedValue:self window:newParent key:kAfloatBadgeControllerKey];
 			
-//			[[NSNotificationCenter defaultCenter]
-//			 addObserver:self selector:@selector(parentWindowDidResize:) name:NSWindowDidResizeNotification object:_parentWindow];
+			//			[[NSNotificationCenter defaultCenter]
+			//			 addObserver:self selector:@selector(parentWindowDidResize:) name:NSWindowDidResizeNotification object:_parentWindow];
 			
 			
 			[newParent retain];
@@ -88,47 +88,53 @@
 	switch (type) {
 		case AfloatBadgeDidBeginKeepingAfloat:
 			[badgeView setImage:[[self class] didBeginKeepingAfloatBadge]];
-
-			//if (![[self window] isVisible]) {
+			
 		{
-				NSPoint targetOrigin = [self middleOriginForParentWindow];
-				NSPoint startingOrigin = targetOrigin;
-				startingOrigin.y -= 20;
-				
-				[[self window] setFrameOrigin:startingOrigin];
-				[[self window] makeKeyAndOrderFront:self];
-				
-				[NSAnimationContext beginGrouping];
-					[[NSAnimationContext currentContext] setDuration:0.4];
-					[[[self window] animator] setFrameOrigin:targetOrigin];
-				[NSAnimationContext endGrouping];
-				
-				enqueuedFades++;
-				[self performSelector:@selector(_fadeOut) withObject:nil afterDelay:0.7];
-			//}
+			NSPoint targetOrigin = [self middleOriginForParentWindow];
+			NSPoint startingOrigin = targetOrigin;
+			startingOrigin.y -= 20;
+			
+			NSRect r = [[self window] frame];
+			r.origin = startingOrigin;
+			[[self window] setFrame:r display:NO];
+			[[self window] makeKeyAndOrderFront:self];
+			
+			[NSAnimationContext beginGrouping];
+			{
+				[[NSAnimationContext currentContext] setDuration:0.4];
+				r.origin = targetOrigin;
+				[[[self window] animator] setFrame:r display:YES];
+			}
+			[NSAnimationContext endGrouping];
+			
+			enqueuedFades++;
+			[self performSelector:@selector(_fadeOut) withObject:nil afterDelay:0.7];
 		}
 			break;
-		
+			
 		case AfloatBadgeDidEndKeepingAfloat:
 			[badgeView setImage:[[self class] didEndKeepingAfloatBadge]];
 			
-			//if (![[self window] isVisible]) {
 		{
-				NSPoint targetOrigin = [self middleOriginForParentWindow];
-				NSPoint startingOrigin = targetOrigin;
-				targetOrigin.y -= 30;
-				
-				[[self window] setFrameOrigin:startingOrigin];
-				[[self window] makeKeyAndOrderFront:self];
-				
-				[NSAnimationContext beginGrouping];
-					[[NSAnimationContext currentContext] setDuration:0.4];
-					[[[self window] animator] setFrameOrigin:targetOrigin];
-				[NSAnimationContext endGrouping];
-
-				enqueuedFades++;
-				[self performSelector:@selector(_fadeOut) withObject:nil afterDelay:0.7];
-			//}
+			NSPoint targetOrigin = [self middleOriginForParentWindow];
+			NSPoint startingOrigin = targetOrigin;
+			targetOrigin.y -= 30;
+			
+			NSRect r = [[self window] frame];
+			r.origin = startingOrigin;
+			[[self window] setFrame:r display:NO];
+			[[self window] makeKeyAndOrderFront:self];
+			
+			[NSAnimationContext beginGrouping];
+			{
+				[[NSAnimationContext currentContext] setDuration:0.4];
+				r.origin = targetOrigin;
+				[[[self window] animator] setFrame:r display:YES];
+			}
+			[NSAnimationContext endGrouping];
+			
+			enqueuedFades++;
+			[self performSelector:@selector(_fadeOut) withObject:nil afterDelay:0.7];
 		}
 			break;
 	}
@@ -146,7 +152,7 @@
 	fadingOut = YES;
 	
 	[[NSAnimationContext currentContext] setDuration:0.2];
-		[[[self window] animator] setAlphaValue:0];
+	[[[self window] animator] setAlphaValue:0];
 	[NSAnimationContext endGrouping];
 	
 	[AfloatStorage removeSharedValueForWindow:self.parentWindow key:kAfloatBadgeControllerKey];
@@ -169,7 +175,7 @@
 	
 	return image;
 }
-	
+
 + (NSImage*) didEndKeepingAfloatBadge {
 	static NSImage* image = nil; if (!image) {
 		NSBundle* bundle = [NSBundle bundleForClass:self];
