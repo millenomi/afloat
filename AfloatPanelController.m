@@ -19,8 +19,17 @@
 
 @implementation AfloatPanelController
 
+/*
 + (void) initialize {
 	[self setKeys:[NSArray arrayWithObject:@"parentWindow"] triggerChangeNotificationsForDependentKey:@"alphaValue"];
+}
+ 
+ // Replaced by nondeprecated variant below.
+ 
+*/
++ (NSSet*) keyPathsForValuesAffectingAlphaValue;
+{
+    return [NSSet setWithObject:@"parentWindow"];
 }
 
 @synthesize parentWindow = _parentWindow;
