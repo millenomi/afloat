@@ -418,9 +418,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 }
 
 - (IBAction) toggleFocusFollowsMouse:(id)sender {
-    BOOL enable = ![[AfloatStorage globalValueForKey:@"FocusFollowsMouse"] boolValue];
-
-    [AfloatStorage setGlobalValue:@(enable)
+    [AfloatStorage setGlobalValue:@([[AfloatStorage globalValueForKey:@"FocusFollowsMouse"] boolValue])
                            forKey:@"FocusFollowsMouse"];
 }
 
