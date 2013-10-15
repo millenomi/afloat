@@ -30,6 +30,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 - (IBAction) makeMoreTransparent:(id) sender;
 - (IBAction) makeLessTransparent:(id) sender;
 
+- (IBAction) toggleFocusFollowsMouse:(id)sender;
+
 - (IBAction) showAdjustEffectsPanel:(id) sender;
 
 - (CGFloat) currentAlphaValueForWindow:(NSWindow*) w;

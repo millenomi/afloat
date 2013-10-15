@@ -101,9 +101,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 		if (key) *key = [w frameAutosaveName];
 		return YES;
 	}
-	
-	
-	
 	return NO;	
 }
 
@@ -153,6 +150,36 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 + (void) setSharedValue:(id) v window:(NSWindow*) w key:(NSString*) k {
 	[[self sharedStorage] setValue:v forWindow:w key:k];
+}
+
++ (void)_withGlobalStorage:(BOOL (^)(NSMutableDictionary *storage)) block
+{
+    NSString *bundleIdentifier = [[NSBundle bundleForClass:self] bundleIdentifier];
+    NSString *storagePath      = [[NSString stringWithFormat:@"~/Library/Preferences/%@.plist", bundleIdentifier] stringByExpandingTildeInPath];
+    NSDistributedLock *lock = [NSDistributedLock lockWithPath:[storagePath stringByAppendingPathExtension:@"lock"]];
+    
+    NSMutableDictionary *storage = [NSMutableDictionary dictionaryWithContentsOfFile:storagePath]
+                                   ?: [NSMutableDictionary new];
+    if(block(storage))
+        [storage writeToFile:storagePath atomically:YES];
+    
+    [lock unlock];
+}
+
++ (id) globalValueForKey:(NSString *) k {
+    __block id value;
+    [self _withGlobalStorage:^(NSMutableDictionary *storage) {
+        value = [storage objectForKey:k];
+        return NO;
+    }];
+    return value;
+}
+
++ (void) setGlobalValue:(id) v forKey:(NSString *) k {
+    [self _withGlobalStorage:^(NSMutableDictionary *storage) {
+        [storage setObject:v forKey:k];
+        return YES;
+    }];
 }
 
 @synthesize delegate = _delegate;

@@ -1,473 +1,84 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="7.02">
-	<data>
-		<int key="IBDocument.SystemTarget">1050</int>
-		<string key="IBDocument.SystemVersion">9C31</string>
-		<string key="IBDocument.InterfaceBuilderVersion">644</string>
-		<string key="IBDocument.AppKitVersion">949.26</string>
-		<string key="IBDocument.HIToolboxVersion">352.00</string>
-		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
-			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="22"/>
-		</object>
-		<object class="NSArray" key="IBDocument.PluginDependencies">
-			<bool key="EncodedWithXMLCoder">YES</bool>
-			<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-		</object>
-		<object class="NSMutableArray" key="IBDocument.RootObjects" id="1000">
-			<bool key="EncodedWithXMLCoder">YES</bool>
-			<object class="NSCustomObject" id="1001">
-				<string key="NSClassName">Afloat</string>
-			</object>
-			<object class="NSCustomObject" id="1003">
-				<string key="NSClassName">FirstResponder</string>
-			</object>
-			<object class="NSCustomObject" id="1004">
-				<string key="NSClassName">NSApplication</string>
-			</object>
-			<object class="NSMenu" id="130294207">
-				<string key="NSTitle"/>
-				<object class="NSMutableArray" key="NSMenuItems">
-					<bool key="EncodedWithXMLCoder">YES</bool>
-					<object class="NSMenuItem" id="150697053">
-						<reference key="NSMenu" ref="130294207"/>
-						<string key="NSTitle">Keep Afloat</string>
-						<string key="NSKeyEquiv">a</string>
-						<int key="NSKeyEquivModMask">1310985</int>
-						<int key="NSMnemonicLoc">2147483647</int>
-						<object class="NSCustomResource" key="NSOnImage" id="399514010">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">NSMenuCheckmark</string>
-						</object>
-						<object class="NSCustomResource" key="NSMixedImage" id="139249560">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">NSMenuMixedState</string>
-						</object>
-					</object>
-					<object class="NSMenuItem" id="593188854">
-						<reference key="NSMenu" ref="130294207"/>
-						<string key="NSTitle">Transparency</string>
-						<string key="NSKeyEquiv"/>
-						<int key="NSKeyEquivModMask">1048576</int>
-						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="399514010"/>
-						<reference key="NSMixedImage" ref="139249560"/>
-						<string key="NSAction">submenuAction:</string>
-						<object class="NSMenu" key="NSSubmenu" id="846961709">
-							<string key="NSTitle">Transparency</string>
-							<object class="NSMutableArray" key="NSMenuItems">
-								<bool key="EncodedWithXMLCoder">YES</bool>
-								<object class="NSMenuItem" id="46479698">
-									<reference key="NSMenu" ref="846961709"/>
-									<string key="NSTitle">Translucent</string>
-									<string key="NSKeyEquiv">1</string>
-									<int key="NSKeyEquivModMask">1310985</int>
-									<int key="NSMnemonicLoc">2147483647</int>
-									<reference key="NSOnImage" ref="399514010"/>
-									<reference key="NSMixedImage" ref="139249560"/>
-								</object>
-								<object class="NSMenuItem" id="934158159">
-									<reference key="NSMenu" ref="846961709"/>
-									<string key="NSTitle">Opaque</string>
-									<string key="NSKeyEquiv">0</string>
-									<int key="NSKeyEquivModMask">1310985</int>
-									<int key="NSMnemonicLoc">2147483647</int>
-									<reference key="NSOnImage" ref="399514010"/>
-									<reference key="NSMixedImage" ref="139249560"/>
-								</object>
-								<object class="NSMenuItem" id="758959318">
-									<reference key="NSMenu" ref="846961709"/>
-									<string key="NSTitle">Make Less Transparent</string>
-									<string type="base64-UTF8" key="NSKeyEquiv">75ysA</string>
-									<int key="NSKeyEquivModMask">1310720</int>
-									<int key="NSMnemonicLoc">2147483647</int>
-									<reference key="NSOnImage" ref="399514010"/>
-									<reference key="NSMixedImage" ref="139249560"/>
-								</object>
-								<object class="NSMenuItem" id="42577020">
-									<reference key="NSMenu" ref="846961709"/>
-									<string key="NSTitle">Make More Transparent</string>
-									<string type="base64-UTF8" key="NSKeyEquiv">75ytA</string>
-									<int key="NSKeyEquivModMask">1310720</int>
-									<int key="NSMnemonicLoc">2147483647</int>
-									<reference key="NSOnImage" ref="399514010"/>
-									<reference key="NSMixedImage" ref="139249560"/>
-								</object>
-							</object>
-						</object>
-					</object>
-					<object class="NSMenuItem" id="405747730">
-						<reference key="NSMenu" ref="130294207"/>
-						<string key="NSTitle">Turn Overlays Back to Normal</string>
-						<string key="NSKeyEquiv"/>
-						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="399514010"/>
-						<reference key="NSMixedImage" ref="139249560"/>
-					</object>
-					<object class="NSMenuItem" id="555293349">
-						<reference key="NSMenu" ref="130294207"/>
-						<bool key="NSIsDisabled">YES</bool>
-						<bool key="NSIsSeparator">YES</bool>
-						<string key="NSTitle"/>
-						<string key="NSKeyEquiv"/>
-						<int key="NSKeyEquivModMask">1048576</int>
-						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="399514010"/>
-						<reference key="NSMixedImage" ref="139249560"/>
-					</object>
-					<object class="NSMenuItem" id="432873915">
-						<reference key="NSMenu" ref="130294207"/>
-						<string key="NSTitle">Adjust Effects</string>
-						<string key="NSKeyEquiv">f</string>
-						<int key="NSKeyEquivModMask">1310985</int>
-						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="399514010"/>
-						<reference key="NSMixedImage" ref="139249560"/>
-					</object>
-					<object class="NSMenuItem" id="260154841">
-						<reference key="NSMenu" ref="130294207"/>
-						<bool key="NSIsDisabled">YES</bool>
-						<bool key="NSIsSeparator">YES</bool>
-						<string key="NSTitle"/>
-						<string key="NSKeyEquiv"/>
-						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="399514010"/>
-						<reference key="NSMixedImage" ref="139249560"/>
-					</object>
-					<object class="NSMenuItem" id="810364617">
-						<reference key="NSMenu" ref="130294207"/>
-						<string type="base64-UTF8" key="NSTitle">U2hvdyBXaW5kb3cncyBGaWxlIGluIEZpbmRlcg</string>
-						<string type="base64-UTF8" key="NSKeyEquiv">75yAA</string>
-						<int key="NSKeyEquivModMask">1310720</int>
-						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="399514010"/>
-						<reference key="NSMixedImage" ref="139249560"/>
-					</object>
-				</object>
-			</object>
-		</object>
-		<object class="IBObjectContainer" key="IBDocument.Objects">
-			<object class="NSMutableArray" key="connectionRecords">
-				<bool key="EncodedWithXMLCoder">YES</bool>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">_menuWithItems</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="130294207"/>
-					</object>
-					<int key="connectionID">12</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">toggleAlwaysOnTop:</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="150697053"/>
-					</object>
-					<int key="connectionID">13</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">makeTranslucent:</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="46479698"/>
-					</object>
-					<int key="connectionID">14</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">makeOpaque:</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="934158159"/>
-					</object>
-					<int key="connectionID">15</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">makeLessTransparent:</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="758959318"/>
-					</object>
-					<int key="connectionID">16</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">makeMoreTransparent:</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="42577020"/>
-					</object>
-					<int key="connectionID">17</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">showAdjustEffectsPanel:</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="432873915"/>
-					</object>
-					<int key="connectionID">18</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">disableAllOverlays:</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="405747730"/>
-					</object>
-					<int key="connectionID">20</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">showWindowFileInFinder:</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="810364617"/>
-					</object>
-					<int key="connectionID">23</int>
-				</object>
-			</object>
-			<object class="IBMutableOrderedSet" key="objectRecords">
-				<object class="NSArray" key="orderedObjects">
-					<bool key="EncodedWithXMLCoder">YES</bool>
-					<object class="IBObjectRecord">
-						<int key="objectID">0</int>
-						<object class="NSArray" key="object" id="1002">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-						</object>
-						<reference key="children" ref="1000"/>
-						<nil key="parent"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">-2</int>
-						<reference key="object" ref="1001"/>
-						<reference key="parent" ref="1002"/>
-						<string type="base64-UTF8" key="objectName">RmlsZSdzIE93bmVyA</string>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">-1</int>
-						<reference key="object" ref="1003"/>
-						<reference key="parent" ref="1002"/>
-						<string key="objectName">First Responder</string>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">-3</int>
-						<reference key="object" ref="1004"/>
-						<reference key="parent" ref="1002"/>
-						<string key="objectName">Application</string>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">1</int>
-						<reference key="object" ref="130294207"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="150697053"/>
-							<reference ref="432873915"/>
-							<reference ref="593188854"/>
-							<reference ref="555293349"/>
-							<reference ref="405747730"/>
-							<reference ref="260154841"/>
-							<reference ref="810364617"/>
-						</object>
-						<reference key="parent" ref="1002"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">2</int>
-						<reference key="object" ref="150697053"/>
-						<reference key="parent" ref="130294207"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">4</int>
-						<reference key="object" ref="432873915"/>
-						<reference key="parent" ref="130294207"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">5</int>
-						<reference key="object" ref="593188854"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="846961709"/>
-						</object>
-						<reference key="parent" ref="130294207"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">6</int>
-						<reference key="object" ref="846961709"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="46479698"/>
-							<reference ref="934158159"/>
-							<reference ref="42577020"/>
-							<reference ref="758959318"/>
-						</object>
-						<reference key="parent" ref="593188854"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">7</int>
-						<reference key="object" ref="46479698"/>
-						<reference key="parent" ref="846961709"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">8</int>
-						<reference key="object" ref="555293349"/>
-						<reference key="parent" ref="130294207"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">9</int>
-						<reference key="object" ref="934158159"/>
-						<reference key="parent" ref="846961709"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">10</int>
-						<reference key="object" ref="42577020"/>
-						<reference key="parent" ref="846961709"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">11</int>
-						<reference key="object" ref="758959318"/>
-						<reference key="parent" ref="846961709"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">19</int>
-						<reference key="object" ref="405747730"/>
-						<reference key="parent" ref="130294207"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">21</int>
-						<reference key="object" ref="260154841"/>
-						<reference key="parent" ref="130294207"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">22</int>
-						<reference key="object" ref="810364617"/>
-						<reference key="parent" ref="130294207"/>
-					</object>
-				</object>
-			</object>
-			<object class="NSMutableDictionary" key="flattenedProperties">
-				<bool key="EncodedWithXMLCoder">YES</bool>
-				<object class="NSMutableArray" key="dict.sortedKeys">
-					<bool key="EncodedWithXMLCoder">YES</bool>
-					<string>-1.IBPluginDependency</string>
-					<string>-2.IBPluginDependency</string>
-					<string>-3.IBPluginDependency</string>
-					<string>1.IBEditorWindowLastContentRect</string>
-					<string>1.IBPluginDependency</string>
-					<string>1.editorWindowContentRectSynchronizationRect</string>
-					<string>10.IBPluginDependency</string>
-					<string>11.IBPluginDependency</string>
-					<string>19.IBPluginDependency</string>
-					<string>2.IBPluginDependency</string>
-					<string>21.IBPluginDependency</string>
-					<string>22.IBPluginDependency</string>
-					<string>4.IBPluginDependency</string>
-					<string>5.IBPluginDependency</string>
-					<string>6.IBEditorWindowLastContentRect</string>
-					<string>6.IBPluginDependency</string>
-					<string>6.editorWindowContentRectSynchronizationRect</string>
-					<string>7.IBPluginDependency</string>
-					<string>8.IBPluginDependency</string>
-					<string>9.IBPluginDependency</string>
-				</object>
-				<object class="NSMutableArray" key="dict.values">
-					<bool key="EncodedWithXMLCoder">YES</bool>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{338, 394}, {294, 123}}</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{170, 454}, {185, 73}}</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{632, 414}, {253, 83}}</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{355, 424}, {253, 83}}</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-				</object>
-			</object>
-			<object class="NSMutableDictionary" key="unlocalizedProperties">
-				<bool key="EncodedWithXMLCoder">YES</bool>
-				<object class="NSArray" key="dict.sortedKeys">
-					<bool key="EncodedWithXMLCoder">YES</bool>
-				</object>
-				<object class="NSMutableArray" key="dict.values">
-					<bool key="EncodedWithXMLCoder">YES</bool>
-				</object>
-			</object>
-			<nil key="activeLocalization"/>
-			<object class="NSMutableDictionary" key="localizations">
-				<bool key="EncodedWithXMLCoder">YES</bool>
-				<object class="NSArray" key="dict.sortedKeys">
-					<bool key="EncodedWithXMLCoder">YES</bool>
-				</object>
-				<object class="NSMutableArray" key="dict.values">
-					<bool key="EncodedWithXMLCoder">YES</bool>
-				</object>
-			</object>
-			<nil key="sourceID"/>
-			<int key="maxID">23</int>
-		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes">
-			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
-				<bool key="EncodedWithXMLCoder">YES</bool>
-				<object class="IBPartialClassDescription">
-					<string key="className">Afloat</string>
-					<string key="superclassName">NSObject</string>
-					<object class="NSMutableDictionary" key="actions">
-						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="NSMutableArray" key="dict.sortedKeys">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>disableAllOverlays:</string>
-							<string>makeLessTransparent:</string>
-							<string>makeMoreTransparent:</string>
-							<string>makeOpaque:</string>
-							<string>makeTranslucent:</string>
-							<string>showAdjustEffectsPanel:</string>
-							<string>showWindowFileInFinder:</string>
-							<string>toggleAlwaysOnTop:</string>
-						</object>
-						<object class="NSMutableArray" key="dict.values">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>id</string>
-							<string>id</string>
-							<string>id</string>
-							<string>id</string>
-							<string>id</string>
-							<string>id</string>
-							<string>id</string>
-							<string>id</string>
-						</object>
-					</object>
-					<object class="NSMutableDictionary" key="outlets">
-						<string key="NS.key.0">_menuWithItems</string>
-						<string key="NS.object.0">NSMenu</string>
-					</object>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">Afloat.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">NSObject</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">AfloatStorage.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">NSObject</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">JRSwizzle.h</string>
-					</object>
-				</object>
-			</object>
-		</object>
-		<int key="IBDocument.localizationMode">0</int>
-		<string key="IBDocument.LastKnownRelativeProjectPath">../Afloat.xcodeproj</string>
-		<int key="IBDocument.defaultPropertyAccessControl">3</int>
-	</data>
-</archive>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4510" systemVersion="13A598" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment version="1050" defaultVersion="1080" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4510"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="Afloat">
+            <connections>
+                <outlet property="_menuWithItems" destination="1" id="12"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application"/>
+        <menu id="1">
+            <items>
+                <menuItem title="Keep Afloat" keyEquivalent="a" id="2">
+                    <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
+                    <connections>
+                        <action selector="toggleAlwaysOnTop:" target="-2" id="13"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Transparency" id="5">
+                    <menu key="submenu" title="Transparency" id="6">
+                        <items>
+                            <menuItem title="Translucent" keyEquivalent="1" id="7">
+                                <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
+                                <connections>
+                                    <action selector="makeTranslucent:" target="-2" id="14"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Opaque" keyEquivalent="0" id="9">
+                                <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
+                                <connections>
+                                    <action selector="makeOpaque:" target="-2" id="15"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Make Less Transparent" keyEquivalent="" id="11">
+                                <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
+                                <connections>
+                                    <action selector="makeLessTransparent:" target="-2" id="16"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Make More Transparent" keyEquivalent="" id="10">
+                                <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
+                                <connections>
+                                    <action selector="makeMoreTransparent:" target="-2" id="17"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Turn Overlays Back to Normal" id="19">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="disableAllOverlays:" target="-2" id="20"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Focus Follows Mouse" keyEquivalent="f" id="eIg-EB-FkF">
+                    <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
+                    <connections>
+                        <action selector="toggleFocusFollowsMouse:" target="-2" id="unm-ml-z2e"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="8">
+                    <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                </menuItem>
+                <menuItem title="Adjust Effects" id="4">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="showAdjustEffectsPanel:" target="-2" id="18"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="21"/>
+                <menuItem title="Show Window's File in Finder" keyEquivalent="" id="22">
+                    <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
+                    <connections>
+                        <action selector="showWindowFileInFinder:" target="-2" id="23"/>
+                    </connections>
+                </menuItem>
+            </items>
+        </menu>
+    </objects>
+</document>
