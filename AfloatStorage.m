@@ -158,6 +158,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
     NSString *storagePath      = [[NSString stringWithFormat:@"~/Library/Preferences/%@.plist", bundleIdentifier] stringByExpandingTildeInPath];
     NSDistributedLock *lock = [NSDistributedLock lockWithPath:[storagePath stringByAppendingPathExtension:@"lock"]];
     
+    while(![lock tryLock]) {
+        usleep(100);
+    }
+    
     NSMutableDictionary *storage = [NSMutableDictionary dictionaryWithContentsOfFile:storagePath]
                                    ?: [NSMutableDictionary new];
     if(block(storage))
