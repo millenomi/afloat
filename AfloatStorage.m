@@ -49,7 +49,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 - (void) setValue:(id) v forWindow:(NSWindow*) w key:(NSString*) k {
 	NSMutableDictionary* d = [self mutableDictionaryForWindow:w];
-	[d setObject:v forKey:k];
+    if(v)
+        [d setObject:v forKey:k];
+    else
+        [d removeObjectForKey:k];
 	[self saveWindowIfRequired:w];
 }
 
@@ -181,7 +184,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 + (void) setGlobalValue:(id) v forKey:(NSString *) k {
     [self _withGlobalStorage:^(NSMutableDictionary *storage) {
-        [storage setObject:v forKey:k];
+        if(v)
+            [storage setObject:v forKey:k];
+        else
+            [storage removeObjectForKey:k];
         return YES;
     }];
 }
