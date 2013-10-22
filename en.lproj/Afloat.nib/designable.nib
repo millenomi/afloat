@@ -56,8 +56,8 @@
                         <action selector="disableAllOverlays:" target="-2" id="20"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Focus Follows Mouse" keyEquivalent="f" id="eIg-EB-FkF">
-                    <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
+                <menuItem title="Focus Follows Mouse" keyEquivalent="F" id="eIg-EB-FkF">
+                    <modifierMask key="keyEquivalentModifierMask" shift="YES" control="YES" command="YES"/>
                     <connections>
                         <action selector="toggleFocusFollowsMouse:" target="-2" id="unm-ml-z2e"/>
                     </connections>
