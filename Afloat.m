@@ -370,8 +370,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 	[self animateFadeInForWindow:[e window]];
 
     BOOL focusFollowsMouse = [[AfloatStorage globalValueForKey:@"FocusFollowsMouse"] boolValue];
-    BOOL commandDown       = [NSEvent modifierFlags] & NSCommandKeyMask ? YES : NO;
-    if(((focusFollowsMouse && !commandDown) || (!focusFollowsMouse && commandDown)) && ![[e window] isKeyWindow]) {
+    BOOL modsDown          = ([NSEvent modifierFlags] & NSCommandKeyMask) ? YES : NO;
+    if(focusFollowsMouse && !modsDown && ![[e window] isKeyWindow]) {
         [[e window] makeKeyAndOrderFront:nil];
         [NSApp activateIgnoringOtherApps:YES];
     }
