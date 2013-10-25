@@ -12,14 +12,33 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 #import <Cocoa/Cocoa.h>
 
+enum ResizeDirectionX {
+    right,
+    left,
+    noX
+};
+
+enum ResizeSectionY {
+    top,
+    bottom,
+    noY
+} ;
+
+struct ResizeSection {
+    enum ResizeDirectionX xResizeDirection;
+    enum ResizeSectionY yResizeDirection;
+};
 
 @interface Afloat : NSObject {
 	IBOutlet NSMenu* _menuWithItems;
 	BOOL _settingOverlay;
+    struct ResizeSection _resizeSection;
 }
 
 + (id) sharedInstance;
 - (NSBundle*) bundle;
+
+@property struct ResizeSection resizeSection;
 
 - (IBAction) toggleAlwaysOnTop:(id) sender;
 - (void) setKeptAfloat:(BOOL) afloat forWindow:(NSWindow*) c showBadgeAnimation:(BOOL) animated;
