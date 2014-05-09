@@ -23,6 +23,9 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 + (id) sharedValueForWindow:(NSWindow*) w key:(NSString*) k;
 + (void) setSharedValue:(id) v window:(NSWindow*) w key:(NSString*) k;
 
++ (id) globalValueForKey:(NSString *) k;
++ (void) setGlobalValue:(id) v forKey:(NSString *) k;
+
 - (id) valueForWindow:(NSWindow*) w key:(NSString*) k;
 - (void) setValue:(id) v forWindow:(NSWindow*) w key:(NSString*) k;
 

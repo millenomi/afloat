@@ -21,10 +21,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 		#define L0LogS(x) NSLog(@"<Afloat - DEBUG: '%s'>: " x, __func__)
 
 	#else
-		
-		// this removes any "unused variables" warnings for variables
-		// that are only used to log debug values.
-		#define L0Log(x, args...) do { {args;} } while(0)
+		#define L0Log(x, args...) do {} while(0)
 		#define L0LogS(x) do {} while(0)
 
 	#endif // DEBUG

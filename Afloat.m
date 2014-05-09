@@ -141,6 +141,11 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 	
 	// Scripting support.
 	[self installScriptingSupport];
+    
+    // Set up tracking rectangles
+    for(NSWindow *window in [NSApp windows]) {
+        [self beginTrackingWindow:window];
+    }
 }
 
 - (NSUInteger) indexForInstallingInMenu:(NSMenu*) m {
@@ -180,6 +185,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 		return c != nil;
 	} else if ([item action] == @selector(showWindowFileInFinder:))
 		return [[self currentWindow] representedURL]? [[[self currentWindow] representedURL] isFileURL] : NO;
+    else if ([item action] == @selector(toggleFocusFollowsMouse:))
+        [item setState:[[AfloatStorage globalValueForKey:@"FocusFollowsMouse"] boolValue] ? NSOnState : NSOffState];
 	
 	return YES;
 }
@@ -309,11 +316,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 	
 	[AfloatStorage setSharedValue:[NSNumber numberWithFloat:f] window:window key:kAfloatLastAlphaValueKey];
 	
-	if (f == 1.0)
-		[self endTrackingWindow:window];
-	else
-		[self beginTrackingWindow:window];
-	
 	if (animate) {
 		[NSAnimationContext beginGrouping];
 		[[NSAnimationContext currentContext] setDuration:0.3];
@@ -366,10 +368,18 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 	L0Log(@"%@", e);
 	
 	[self animateFadeInForWindow:[e window]];
+
+    BOOL focusFollowsMouse = [[AfloatStorage globalValueForKey:@"FocusFollowsMouse"] boolValue];
+    BOOL modsDown          = ([NSEvent modifierFlags] & NSCommandKeyMask) ? YES : NO;
+    if(focusFollowsMouse && !modsDown && ![[e window] isKeyWindow]) {
+        [[e window] makeKeyAndOrderFront:nil];
+        [NSApp activateIgnoringOtherApps:YES];
+    }
 }
 
 - (void) windowDidBecomeMain:(NSNotification*) n {
 	[self animateFadeInForWindow:[n object]];
+    [self beginTrackingWindow:[n object]];
 }
 
 - (void) animateFadeInForWindow:(NSWindow*) w {
@@ -390,6 +400,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 - (void) windowDidResignMain:(NSNotification*) n {
 	[self animateFadeOutForWindow:[n object]];
+    [self beginTrackingWindow:[n object]];
 }
 
 - (void) animateFadeOutForWindow:(NSWindow*) w {
@@ -404,6 +415,11 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 	[[w animator] setAlphaValue:a];
 	[NSAnimationContext endGrouping];	
 	
+}
+
+- (IBAction) toggleFocusFollowsMouse:(id)sender {
+    [AfloatStorage setGlobalValue:@(![[AfloatStorage globalValueForKey:@"FocusFollowsMouse"] boolValue])
+                           forKey:@"FocusFollowsMouse"];
 }
 
 - (IBAction) showAdjustEffectsPanel:(id) sender {
