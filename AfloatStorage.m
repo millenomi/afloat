@@ -159,7 +159,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 {
     NSString *bundleIdentifier = [[NSBundle bundleForClass:self] bundleIdentifier];
     NSString *storagePath      = [[NSString stringWithFormat:@"~/Library/Preferences/%@.plist", bundleIdentifier] stringByExpandingTildeInPath];
-    NSDistributedLock *lock = [NSDistributedLock lockWithPath:[storagePath stringByAppendingPathExtension:@"lock"]];
+    NSDistributedLock *lock = [NSDistributedLock lockWithPath:[storagePath stringByAppendingPathExtension:@"lockfile"]];
     
     while(![lock tryLock]) {
         usleep(100);

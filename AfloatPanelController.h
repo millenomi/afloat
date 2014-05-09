@@ -27,7 +27,7 @@ typedef enum {
 
 - (IBAction) disableAllOverlays:(id) sender;
 
-@property(retain) NSWindow* parentWindow;
+@property(retain, nonatomic) NSWindow* parentWindow;
 @property CGFloat alphaValue;
 // @property(getter=isKeptAfloat) BOOL keptAfloat;
 @property AfloatWindowState windowState;
