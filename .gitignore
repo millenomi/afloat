@@ -6,3 +6,6 @@ Build
 build
 TemporaryItems
 .DS_Store
+Afloat.xcodeproj/project.xcworkspace/xcuserdata
+Afloat.xcodeproj/xcuserdata
+AfloatScripting/AfloatScripting.xcodeproj/xcuserdata
