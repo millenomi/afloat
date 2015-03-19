@@ -15,7 +15,9 @@
 - (id) performDefaultImplementation {
 	BOOL keptOnAllSpaces = [[self directParameter] boolValue];
 	
-	[[NSApp delegate] rearmDeathTimer];
+    AfloatScriptingAppDelegate *asap = [[[AfloatScriptingAppDelegate alloc] init] autorelease];
+    [asap rearmDeathTimer];
+    
 	[[NSDistributedNotificationCenter defaultCenter] postNotificationName:kAfloatScriptSetKeptOnAllSpacesNotification object:kAfloatScriptWireObject userInfo:
 	 [NSDictionary dictionaryWithObjectsAndKeys:
 	  [NSNumber numberWithBool:keptOnAllSpaces], @"keptOnAllSpaces",

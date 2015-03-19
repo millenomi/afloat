@@ -13,7 +13,8 @@
 @implementation AfloatDisableOverlaysCommand
 
 - (id) performDefaultImplementation {
-	[[NSApp delegate] rearmDeathTimer];
+    AfloatScriptingAppDelegate *asap = [[[AfloatScriptingAppDelegate alloc] init] autorelease];
+    [asap rearmDeathTimer];
 	
 	[[NSDistributedNotificationCenter defaultCenter]
 	 postNotificationName:kAfloatScriptDisableAllOverlaysNotification object:kAfloatScriptWireObject];
