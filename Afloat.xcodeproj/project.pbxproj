@@ -502,7 +502,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1512ABDB0E09AB7300BA67AC /* Afloat.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -533,7 +533,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1512ABDB0E09AB7300BA67AC /* Afloat.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
