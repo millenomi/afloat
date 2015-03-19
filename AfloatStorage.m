@@ -39,8 +39,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 - (void) dealloc {
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
-	[_backingStorage release];
-	[super dealloc];
 }
 
 - (id) valueForWindow:(NSWindow*) w key:(NSString*) k {

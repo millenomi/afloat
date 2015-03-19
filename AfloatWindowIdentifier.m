@@ -144,12 +144,6 @@
 	return classes;
 }
 
-- (void) dealloc {
-	self.category = nil;
-	self.key = nil;
-	
-	[super dealloc];
-}
 
 @synthesize category = _category, key = _key, canMatchMultipleWindows = _canMatchMultipleWindows;
 
@@ -158,7 +152,7 @@
 	
 	for (Class c in [self identifierSubclasses]) {
 		if ([c canInitWithWindow:w])
-			[results addObject:[[[c alloc] initWithWindow:w] autorelease]];
+			[results addObject:[[c alloc] initWithWindow:w]];
 	}
 	
 	return results;

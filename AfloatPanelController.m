@@ -43,7 +43,6 @@
 			[[NSNotificationCenter defaultCenter]
 			 removeObserver:self name:NSWindowDidResizeNotification object:_parentWindow];
 						
-			[_parentWindow release];
 		}
 		
 		if (newParent) {
@@ -53,7 +52,6 @@
 			 addObserver:self selector:@selector(parentWindowDidResize:) name:NSWindowDidResizeNotification object:_parentWindow];
 			
 			
-			[newParent retain];
 		}
 		
 		_parentWindow = newParent;
@@ -98,13 +96,11 @@
 	if (panel)
 		return panel;
 	else
-		return [[[self alloc] initAttachedToWindow:w] autorelease];
+		return [[self alloc] initAttachedToWindow:w];
 }
 
 - (void) dealloc {
 	[AfloatStorage removeSharedValueForWindow:self.parentWindow key:kAfloatPanelControllerKey];
-	self.parentWindow = nil;
-	[super dealloc];
 }
 
 - (IBAction) toggleWindow:(id) sender {

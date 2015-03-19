@@ -15,7 +15,7 @@
 - (id) performDefaultImplementation {
 	float alphaValue = [[self directParameter] floatValue];
 	
-    AfloatScriptingAppDelegate *asap = [[[AfloatScriptingAppDelegate alloc] init] autorelease];
+    AfloatScriptingAppDelegate *asap = [[AfloatScriptingAppDelegate alloc] init];
     [asap rearmDeathTimer];
 	
 	[[NSDistributedNotificationCenter defaultCenter] postNotificationName:kAfloatScriptSetAlphaValueNotification object:kAfloatScriptWireObject userInfo:

@@ -13,7 +13,7 @@
 @implementation AfloatMakeMoreTransparentCommand
 
 - (id) performDefaultImplementation {
-    AfloatScriptingAppDelegate *asap = [[[AfloatScriptingAppDelegate alloc] init] autorelease];
+    AfloatScriptingAppDelegate *asap = [[AfloatScriptingAppDelegate alloc] init];
     [asap rearmDeathTimer];
 	
 	[[NSDistributedNotificationCenter defaultCenter]

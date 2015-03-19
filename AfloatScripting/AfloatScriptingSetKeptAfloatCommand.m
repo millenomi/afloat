@@ -16,7 +16,7 @@
 	BOOL showsBadgeAnimation = AfloatBOOLFromObject([[self evaluatedArguments] objectForKey:@"showsBadgeAnimation"], YES);
 	BOOL keptAfloat = AfloatBOOLFromObject([self directParameter], NO);
 	
-    AfloatScriptingAppDelegate *asap = [[[AfloatScriptingAppDelegate alloc] init] autorelease];
+    AfloatScriptingAppDelegate *asap = [[AfloatScriptingAppDelegate alloc] init];
     [asap rearmDeathTimer];
     
 	[[NSDistributedNotificationCenter defaultCenter] postNotificationName:kAfloatScriptSetKeptAfloatNotification object:kAfloatScriptWireObject userInfo:

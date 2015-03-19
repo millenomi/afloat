@@ -58,7 +58,7 @@ static float AfloatFloatFromObject(id object, float defaultValue) {
 	[[NSDistributedNotificationCenter defaultCenter] addObserver:self selector:@selector(_scriptShouldShowWindowFileInFinder:) name:kAfloatScriptShowWindowFileInFinderNotification object:kAfloatScriptWireObject];
 
 	NSString* pathToScriptingApp = [[[[NSBundle bundleForClass:[self class]] bundlePath] stringByAppendingPathComponent:@"Contents"] stringByAppendingPathComponent:@"Afloat Scripting.app"];
-	LSRegisterURL((CFURLRef) [NSURL fileURLWithPath:pathToScriptingApp], false);
+	LSRegisterURL((__bridge CFURLRef) [NSURL fileURLWithPath:pathToScriptingApp], false);
 	
 	L0LogS(@"Scripting support installed.");
 }

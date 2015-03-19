@@ -117,9 +117,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 	if (index < [menu numberOfItems] && ![[menu itemAtIndex:index] isSeparatorItem])
 		[menu insertItem:[NSMenuItem separatorItem] atIndex:index];
 
-	[badge release];
 	
-	[_menuWithItems release]; _menuWithItems = nil;
+	 _menuWithItems = nil;
 	
 	// Set up swizzling sendEvents: in NSApplication --------------
 	
@@ -348,7 +347,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 	
 	L0Log(@"tracker = %@ view = %@", tracker, v);
 	
-	[tracker release];
 }
 
 - (void) endTrackingWindow:(NSWindow*) window {

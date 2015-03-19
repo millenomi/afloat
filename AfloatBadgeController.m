@@ -19,7 +19,7 @@
 	if (panel)
 		return panel;
 	else
-		return [[[self alloc] initAttachedToWindow:w] autorelease];
+		return [[self alloc] initAttachedToWindow:w];
 }
 
 - (id) initAttachedToWindow:(NSWindow*) parentWindow {
@@ -48,7 +48,6 @@
 		if (_parentWindow) {
 			[AfloatStorage removeSharedValueForWindow:_parentWindow key:kAfloatBadgeControllerKey];
 			
-			[_parentWindow release];
 		}
 		
 		if (newParent) {
@@ -58,7 +57,6 @@
 			//			 addObserver:self selector:@selector(parentWindowDidResize:) name:NSWindowDidResizeNotification object:_parentWindow];
 			
 			
-			[newParent retain];
 		}
 		
 		_parentWindow = newParent;
@@ -188,9 +186,5 @@
 }
 
 
-- (void) dealloc {
-	self.parentWindow = nil;
-	[super dealloc];
-}
 
 @end

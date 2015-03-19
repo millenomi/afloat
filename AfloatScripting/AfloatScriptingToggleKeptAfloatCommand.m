@@ -15,7 +15,7 @@
 - (id) performDefaultImplementation {
 	BOOL showsBadgeAnimation = AfloatBOOLFromObject([[self evaluatedArguments] objectForKey:@"showsBadgeAnimation"], YES);
     
-    AfloatScriptingAppDelegate *asap = [[[AfloatScriptingAppDelegate alloc] init] autorelease];
+    AfloatScriptingAppDelegate *asap = [[AfloatScriptingAppDelegate alloc] init];
     [asap rearmDeathTimer];
     
 	[[NSDistributedNotificationCenter defaultCenter] postNotificationName:kAfloatScriptToggleKeptAfloatNotification object:kAfloatScriptWireObject userInfo:[NSDictionary dictionaryWithObject:[NSNumber numberWithBool:showsBadgeAnimation] forKey:@"showsBadgeAnimation"]];

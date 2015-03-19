@@ -17,7 +17,7 @@
 	NSLog(@"Will pin to desktop = %@ (%d)", [self directParameter], pinnedToDesktop);
 	BOOL showsBadgeAnimation = AfloatBOOLFromObject([[self evaluatedArguments] objectForKey:@"showsBadgeAnimation"], YES);
 	
-    AfloatScriptingAppDelegate *asap = [[[AfloatScriptingAppDelegate alloc] init] autorelease];
+    AfloatScriptingAppDelegate *asap = [[AfloatScriptingAppDelegate alloc] init];
     [asap rearmDeathTimer];
     
 	[[NSDistributedNotificationCenter defaultCenter] postNotificationName:kAfloatScriptSetPinnedToDesktopNotification object:kAfloatScriptWireObject userInfo:
