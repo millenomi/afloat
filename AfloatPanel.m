@@ -25,10 +25,6 @@
 	return self;
 }
 
-- (void) dealloc {
-	[_image release];
-	[super dealloc];
-}
 
 - (void) drawRect:(NSRect) r {
 	[[NSColor clearColor] set]; NSRectFill(r);

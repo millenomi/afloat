@@ -94,8 +94,17 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 	
 	NSUInteger index = [self indexForInstallingInMenu:menu];
 	
-	[NSBundle loadNibNamed:@"Afloat" owner:self];
+	//[NSBundle loadNibNamed:@"Afloat" owner:self];
+    // Replaced with more functional nibLoading below
 	
+    if ([[NSBundle mainBundle] respondsToSelector:@selector(loadNibNamed:owner:topLevelObjects:)]) {
+        // We're running on Mountain Lion or higher
+        [[NSBundle mainBundle] loadNibNamed:@"Afloat" owner:self topLevelObjects:nil];
+    } else {
+        // We're running on Lion
+        [NSBundle loadNibNamed:@"Afloat" owner:self];
+    }
+    
 	NSImage* badge = [[NSImage alloc] initWithContentsOfFile:
 					  [[self bundle] pathForImageResource:@"AfloatMenuBadge"]];
 	
@@ -117,9 +126,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 	if (index < [menu numberOfItems] && ![[menu itemAtIndex:index] isSeparatorItem])
 		[menu insertItem:[NSMenuItem separatorItem] atIndex:index];
 
-	[badge release];
 	
-	[_menuWithItems release]; _menuWithItems = nil;
+	 _menuWithItems = nil;
 	
 	// Set up swizzling sendEvents: in NSApplication --------------
 	
@@ -348,7 +356,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 	
 	L0Log(@"tracker = %@ view = %@", tracker, v);
 	
-	[tracker release];
 }
 
 - (void) endTrackingWindow:(NSWindow*) window {

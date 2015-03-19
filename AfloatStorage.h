@@ -14,7 +14,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 @interface AfloatStorage : NSObject {
 	NSMutableDictionary* _backingStorage;
-	id _delegate;
+	id __strong _delegate;
 	NSArray* _persistedKeys;
 }
 
@@ -28,7 +28,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 - (NSMutableDictionary*) mutableDictionaryForWindow:(NSWindow*) w;
 
-@property(assign) id delegate;
+@property(strong) id delegate;
 @property(copy) NSArray* persistedKeys;
 
 - (void) removeValueForWindow:(NSWindow*) w key:(NSString*) k;

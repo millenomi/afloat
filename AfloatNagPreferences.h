@@ -15,13 +15,12 @@ enum {
 typedef NSInteger AfloatNagAction;
 
 static id AfloatNagGetPreferenceForKey(CFStringRef key, Class cl) {
-	id obj = (id) CFPreferencesCopyAppValue(key, kAfloatNagPreferencesIdentifier);
+	id obj = (id) CFBridgingRelease(CFPreferencesCopyAppValue(key, kAfloatNagPreferencesIdentifier));
 	if (cl && obj && ![obj isKindOfClass:cl]) {
-		[obj release];
 		obj = nil;
 	}
 	
-	return [obj autorelease];
+	return obj;
 }
 
 static BOOL AfloatNagGetBooleanForKey(CFStringRef key) {

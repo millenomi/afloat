@@ -18,10 +18,9 @@
 - (void) rearmDeathTimer {
 	if (deathTimer) {
 		[deathTimer invalidate];
-		[deathTimer release];
 	}
 	
-	deathTimer = [[NSTimer scheduledTimerWithTimeInterval:60 target:self selector:@selector(deathTimerTicked:) userInfo:nil repeats:NO] retain];
+	deathTimer = [NSTimer scheduledTimerWithTimeInterval:60 target:self selector:@selector(deathTimerTicked:) userInfo:nil repeats:NO];
 }
 
 - (void) deathTimerTicked:(NSTimer*) t {
@@ -30,8 +29,6 @@
 
 - (void) dealloc {
 	[deathTimer invalidate];
-	[deathTimer release];
-	[super dealloc];
 }
 
 @end

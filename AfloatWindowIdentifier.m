@@ -144,21 +144,15 @@
 	return classes;
 }
 
-- (void) dealloc {
-	self.category = nil;
-	self.key = nil;
-	
-	[super dealloc];
-}
 
 @synthesize category = _category, key = _key, canMatchMultipleWindows = _canMatchMultipleWindows;
 
 + (NSArray*) allIdentifiersForWindow:(NSWindow*) w {
-	NSMutableArray* results = [NSArray array];
+	NSMutableArray* results = [NSArray mutableCopy];
 	
 	for (Class c in [self identifierSubclasses]) {
 		if ([c canInitWithWindow:w])
-			[results addObject:[[[c alloc] initWithWindow:w] autorelease]];
+			[results addObject:[[c alloc] initWithWindow:w]];
 	}
 	
 	return results;
