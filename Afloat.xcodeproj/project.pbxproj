@@ -333,7 +333,7 @@
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0620;
 			};
 			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "Afloat" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -502,7 +502,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1512ABDB0E09AB7300BA67AC /* Afloat.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -533,7 +533,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1512ABDB0E09AB7300BA67AC /* Afloat.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -561,6 +561,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1512ABDB0E09AB7300BA67AC /* Afloat.xcconfig */;
 			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
 			name = Debug;
