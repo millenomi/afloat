@@ -148,7 +148,7 @@
 @synthesize category = _category, key = _key, canMatchMultipleWindows = _canMatchMultipleWindows;
 
 + (NSArray*) allIdentifiersForWindow:(NSWindow*) w {
-	NSMutableArray* results = [NSArray array];
+	NSMutableArray* results = [NSArray mutableCopy];
 	
 	for (Class c in [self identifierSubclasses]) {
 		if ([c canInitWithWindow:w])
